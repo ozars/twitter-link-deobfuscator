@@ -4,7 +4,7 @@
   "version": "1.0.1",
 
   "author": "Alin Pasol",
-  "homepage_url": "https://github.com/theAlinP/twitter-link-deobfuscator",
+  "homepage_url": "https://github.com/ozars/twitter-link-deobfuscator",
   "description": "__MSG_extensionDescription__",
   "default_locale": "en",
   "content_scripts": [
@@ -36,7 +36,7 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "{d820ea6b-de81-4b11-ad1f-832314b8a49f}"
+      "id": "twitter-link-deobfuscator.ozars@github"
     }
   },
   "background": {
