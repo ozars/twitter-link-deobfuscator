@@ -166,6 +166,7 @@ TLD_background.interceptNetworkRequests = function(requestDetails) {
               requestArray[requestArray.length - 1] === "user_updates.json" ||    // if the JSON contains additional Direct Messages...
               requestArray[requestArray.length - 1] === "home.json" ||    // if the JSON contains the initial or additional top tweets requested from the "Home" page...
               requestArray[requestArray.length - 1] === "home_latest.json" ||    // if the JSON contains the initial or additional latest tweets requested from the "Home" page...
+              requestArray[requestArray.length - 1] === "list.json" ||    // lists
               requestArray[requestArray.length - 2] === "profile" ||    // if the JSON contains initial or additional tweets requested from a profile page...
               requestArray[requestArray.length - 3] === "graphql" &&    // if a GraphQL API call is made to request(1/2)
               requestArray[requestArray.length - 1] === "Conversation" ||    // ...replies to tweets(2/2)
@@ -300,13 +301,13 @@ TLD_background.interceptNetworkRequests = function(requestDetails) {
                         continue;
                       }
 
-                      /*for (let url of urls) {
+                      for (let url of urls) {
                         //tweet_entries[entry].full_text = tweet_entries[entry].full_text.replace(url.url, url.expanded_url);
                         //console.log(tweet_entries[entry].full_text);    // for debugging
                         url.url = url.expanded_url;
                         //console.log(url.url);    // for debugging
                         TLD_background.messageContentScript(requestDetails.tabId);    // send a message to the content script from the tab the network request was made
-                      }    // uncloak the links from tweets*/
+                      }    // uncloak the links from tweets
                       if (Object.prototype.hasOwnProperty.call(tweet_entries[entry], "card")) {
                         //console.log(requestDetails.requestId);    // for debugging
                         //console.log(requestDetails.url);    // for debugging
